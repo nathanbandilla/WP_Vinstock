@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="vincta-download-purpose" content="design">
+<meta name="vincta-design-wrap" content="iframe">
+<meta name="vincta-design-width" content="500">
+<meta name="vincta-design-height" content="550">
+<meta name="vincta-content-width" content="500">
+<meta name="vincta-content-height" content="550">
+<title>Card Reveal</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:transparent;overflow:hidden;}
+.vincta-design-root{
+  width:100%;height:100%;min-height:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;box-sizing:border-box;
+}
+.vincta-design-viewport{
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  
+}
+.vincta-design-shell{
+  position:absolute;left:0;top:0;
+  width:500px;height:550px;
+  transform-origin:0 0;
+}
+
+.vincta-design-shell>iframe{
+  display:block;width:500px;height:550px;
+  max-width:500px;max-height:550px;
+  border:0;overflow:hidden;box-sizing:border-box;background:transparent;
+}
+
+</style>
+</head>
+<body>
+<div class="vincta-design-root" id="vincta-design-root">
+  <div class="vincta-design-viewport" id="vincta-design-viewport">
+    <div class="vincta-design-shell" id="vincta-design-shell">
+      <iframe
+      title="Card Reveal"
+      width="500"
+      height="550"
+      scrolling="no"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+      srcdoc="<!doctype html><html lang=&quot;en&quot;><head><meta charset=&quot;utf-8&quot;><meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;><style>:root{--design-w:500px;--design-h:550px;--surface-origin:center center;--surface-bg:transparent;--surface-radius:0px;--card-x:0px;--card-y:0px;--card-width:190px;--card-height:254px;--card-radius:16px;--content-padding:0px;--border-width:1px;--border-color:#FF7F50;--card-perspective:1000px;--shadow-x:0px;--shadow-y:8px;--shadow-blur:14px;--shadow-opacity:0.2;--shadow-color-rgb:0,0,0;--front-title-font:Arial,sans-serif;--back-title-font:Arial,sans-serif;--front-text-font:Arial,sans-serif;--back-text-font:Arial,sans-serif;--front-title-size:24px;--front-title-weight:900;--front-title-spacing:0px;--back-title-size:24px;--back-title-weight:900;--back-title-spacing:0px;--front-text-size:16px;--front-text-weight:400;--front-text-spacing:0px;--back-text-size:16px;--back-text-weight:400;--back-text-spacing:0px;--text-gap:14px;--front-title-color:#FF7F50;--front-text-color:#FF7F50;--back-title-color:#FFFFFF;--back-text-color:#FFFFFF;--front-gradient-angle:120deg;--back-gradient-angle:120deg;--front-a:#FFE4C4;--front-b:#ffecd5;--front-c:#ffc5b0;--front-d:#FF7F50;--back-a:#FFAE91;--back-b:#FF7F50;--back-c:#ffbda5;--back-d:#ff9b77;--flip-duration:0.8s;--flip-easing:ease;--return-duration:0.8s;--return-easing:ease;--flip-transform:rotateY(180deg);--back-transform:rotateY(180deg);}*,*::before,*::after{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}#export-frame{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}#surface-scale-wrap{position:relative;width:var(--design-w);height:var(--design-h);flex-shrink:0;transform-origin:var(--surface-origin);z-index:1}
+#design-surface{position:relative;width:var(--design-w);height:var(--design-h);overflow:visible;border-radius:var(--surface-radius);background:var(--surface-bg)}
+.flip-card-stage{position:absolute;left:calc(50% + var(--card-x));top:calc(50% + var(--card-y));width:var(--card-width);height:var(--card-height);transform:translate(-50%,-50%);transform-origin:center center}
+.flip-card{position:relative;width:100%;height:100%;background-color:transparent;perspective:var(--card-perspective);cursor:pointer}
+.flip-card-inner{position:relative;width:100%;height:100%;text-align:center;transition:transform var(--return-duration) var(--return-easing);transform-style:preserve-3d;will-change:transform}
+.flip-card.is-active .flip-card-inner{transform:var(--flip-transform);transition-duration:var(--flip-duration);transition-timing-function:var(--flip-easing)}
+.flip-card-face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--text-gap);width:100%;height:100%;padding:var(--content-padding);overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:var(--border-width) solid var(--border-color);border-radius:var(--card-radius);box-shadow:var(--shadow-x) var(--shadow-y) var(--shadow-blur) 0 rgba(var(--shadow-color-rgb),var(--shadow-opacity))}
+.flip-card-front{background:linear-gradient(var(--front-gradient-angle),var(--front-a) 0%,var(--front-b) 58%,var(--front-c) 82%,var(--front-d) 100%)}
+.flip-card-back{background:linear-gradient(var(--back-gradient-angle),var(--back-a) 0%,var(--back-b) 58%,var(--back-c) 82%,var(--back-d) 100%);transform:var(--back-transform)}
+.card-title{margin:0;line-height:1.05}
+.card-copy{margin:0;line-height:1.25}
+#front-title{color:var(--front-title-color);font-family:var(--front-title-font);font-size:var(--front-title-size);font-weight:var(--front-title-weight);letter-spacing:var(--front-title-spacing)}
+#back-title{color:var(--back-title-color);font-family:var(--back-title-font);font-size:var(--back-title-size);font-weight:var(--back-title-weight);letter-spacing:var(--back-title-spacing)}
+#front-copy{color:var(--front-text-color);font-family:var(--front-text-font);font-size:var(--front-text-size);font-weight:var(--front-text-weight);letter-spacing:var(--front-text-spacing)}
+#back-copy{color:var(--back-text-color);font-family:var(--back-text-font);font-size:var(--back-text-size);font-weight:var(--back-text-weight);letter-spacing:var(--back-text-spacing)}
+#design-surface.edit-paused .flip-card-inner{transition:none!important;animation:none!important}
+@media(prefers-reduced-motion:reduce){.flip-card-inner{transition-duration:.01ms!important}}</style><script type=&quot;application/json&quot; id=&quot;vincta-html-embed-meta&quot;>{&quot;sourceHtmlId&quot;:&quot;&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;editSourceUrl&quot;:&quot;&quot;,&quot;htmlType&quot;:0,&quot;htmlSource&quot;:null,&quot;htmlTemplateId&quot;:null,&quot;width&quot;:500,&quot;htmlDesignWidth&quot;:500,&quot;height&quot;:550,&quot;htmlDesignHeight&quot;:550}</script>
+</head><body data-vincta-tool=&quot;flip-reveal-card&quot; data-vincta-version=&quot;1&quot;><div id=&quot;export-frame&quot;><div id=&quot;surface-scale-wrap&quot;><div id=&quot;design-surface&quot;><div class=&quot;flip-card-stage&quot;><div class=&quot;flip-card&quot; id=&quot;flip-card&quot; role=&quot;group&quot; aria-label=&quot;Flip reveal card&quot;><div class=&quot;flip-card-inner&quot;><div class=&quot;flip-card-face flip-card-front&quot;><p class=&quot;card-title&quot; id=&quot;front-title&quot;>INTERACTIVE</p><p class=&quot;card-copy&quot; id=&quot;front-copy&quot;>WORK OUTS</p></div><div class=&quot;flip-card-face flip-card-back&quot;><p class=&quot;card-title&quot; id=&quot;back-title&quot;>TAILORED</p><p class=&quot;card-copy&quot; id=&quot;back-copy&quot;>COACHING PLANS</p></div></div></div></div></div></div></div><script id=&quot;vincta-template-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:7,&quot;componentType&quot;:&quot;flip-reveal-card&quot;,&quot;canvasWidth&quot;:500,&quot;canvasHeight&quot;:550,&quot;frontTitle&quot;:&quot;INTERACTIVE&quot;,&quot;frontText&quot;:&quot;WORK OUTS&quot;,&quot;backTitle&quot;:&quot;TAILORED&quot;,&quot;backText&quot;:&quot;COACHING PLANS&quot;,&quot;frontTitleFontFamily&quot;:&quot;Arial&quot;,&quot;frontTitleCustomFontUrl&quot;:&quot;&quot;,&quot;backTitleFontFamily&quot;:&quot;Arial&quot;,&quot;backTitleCustomFontUrl&quot;:&quot;&quot;,&quot;frontTextFontFamily&quot;:&quot;Arial&quot;,&quot;frontTextCustomFontUrl&quot;:&quot;&quot;,&quot;backTextFontFamily&quot;:&quot;Arial&quot;,&quot;backTextCustomFontUrl&quot;:&quot;&quot;,&quot;frontTitleSize&quot;:24,&quot;frontTitleWeight&quot;:900,&quot;frontTitleSpacing&quot;:0,&quot;backTitleSize&quot;:24,&quot;backTitleWeight&quot;:900,&quot;backTitleSpacing&quot;:0,&quot;frontTextSize&quot;:16,&quot;frontTextWeight&quot;:400,&quot;frontTextSpacing&quot;:0,&quot;backTextSize&quot;:16,&quot;backTextWeight&quot;:400,&quot;backTextSpacing&quot;:0,&quot;textGap&quot;:14,&quot;surfaceColor&quot;:&quot;#212121&quot;,&quot;surfaceTransparent&quot;:true,&quot;surfaceRadius&quot;:0,&quot;cardWidth&quot;:190,&quot;cardHeight&quot;:254,&quot;cardX&quot;:0,&quot;cardY&quot;:0,&quot;cardRadius&quot;:16,&quot;contentPadding&quot;:0,&quot;borderWidth&quot;:1,&quot;perspective&quot;:1000,&quot;shadowX&quot;:0,&quot;shadowY&quot;:8,&quot;shadowBlur&quot;:14,&quot;shadowOpacity&quot;:20,&quot;shadowColor&quot;:&quot;#000000&quot;,&quot;frontBase&quot;:&quot;#FFE4C4&quot;,&quot;frontAccent&quot;:&quot;#FF7F50&quot;,&quot;frontTitleColor&quot;:&quot;#FF7F50&quot;,&quot;frontTextColor&quot;:&quot;#FF7F50&quot;,&quot;frontGradientAngle&quot;:120,&quot;backBase&quot;:&quot;#FFAE91&quot;,&quot;backAccent&quot;:&quot;#FF7F50&quot;,&quot;backTitleColor&quot;:&quot;#FFFFFF&quot;,&quot;backTextColor&quot;:&quot;#FFFFFF&quot;,&quot;backGradientAngle&quot;:120,&quot;borderColor&quot;:&quot;#FF7F50&quot;,&quot;flipAxis&quot;:&quot;Y&quot;,&quot;flipDirection&quot;:&quot;forward&quot;,&quot;flipAngle&quot;:180,&quot;flipDuration&quot;:0.8,&quot;flipEasing&quot;:&quot;ease&quot;,&quot;returnDuration&quot;:0.8,&quot;returnEasing&quot;:&quot;ease&quot;,&quot;initialSide&quot;:&quot;front&quot;,&quot;triggerMode&quot;:&quot;auto-loop&quot;,&quot;loopPreview&quot;:true,&quot;startDelay&quot;:0,&quot;stayDuration&quot;:1.2,&quot;loopGap&quot;:0.8,&quot;editorUiState&quot;:{&quot;sections&quot;:{&quot;section-style&quot;:true,&quot;section-animation&quot;:false},&quot;subsections&quot;:{&quot;section-style&quot;:&quot;style-content&quot;,&quot;section-animation&quot;:&quot;animation-interaction&quot;},&quot;lastEditedControl&quot;:&quot;backTitle&quot;},&quot;toolType&quot;:&quot;ui&quot;,&quot;designWidth&quot;:500,&quot;designHeight&quot;:550,&quot;surfaceOrigin&quot;:&quot;center center&quot;}</script><script>(function(){var s=document.getElementById(&quot;surface-scale-wrap&quot;),p=s.parentElement;function fit(){s.style.transform=&quot;none&quot;;var z=Math.min(p.clientWidth/500,p.clientHeight/550);s.style.transform=&quot;scale(&quot;+z+&quot;)&quot;}addEventListener(&quot;resize&quot;,fit);fit();(function exportedRuntimeFactory(cfg){var card=document.getElementById('flip-card'),timer=null,hoverStarted=false,paused=false,stopped=false,phase='idle',started=0,duration=0,remaining=0;function active(on){card.classList.toggle('is-active',!!on)}function initialBack(){return cfg.initialSide==='back'}function transitionSecondsForState(toBack){return Number(toBack?cfg.flipDuration:cfg.returnDuration)||0}function initial(){active(initialBack())}function stop(){if(timer){clearTimeout(timer);timer=null}}function arm(ms,p,fn){stop();phase=p;started=Date.now();duration=Math.max(0,ms);timer=setTimeout(function(){timer=null;fn()},Math.max(0,ms))}function finish(loop){var home=initialBack();active(home);arm(transitionSecondsForState(home)*1000,'return',function(){if(loop)arm(Number(cfg.loopGap)*1000,'gap',function(){cycle(true)})})}function cycle(loop){var target=!initialBack();active(target);arm((transitionSecondsForState(target)+Number(cfg.stayDuration))*1000,'active',function(){finish(loop)})}function once(delay){arm(Number(delay)*1000,'delay',function(){cycle(false)})}function schedule(delay){arm(Number(delay)*1000,'delay',function(){cycle(true)})}function pauseRemain(){if(paused||stopped)return;paused=true;if(timer){remaining=Math.max(0,duration-(Date.now()-started));stop()}else remaining=0}function resumeRemain(){if(!paused||stopped)return;paused=false;var ms=Math.max(0,remaining||0),saved=phase;if(saved==='delay')arm(ms,'delay',function(){cycle(true)});else if(saved==='active')arm(ms,'active',function(){finish(true)});else if(saved==='return')arm(ms,'return',function(){arm(Number(cfg.loopGap)*1000,'gap',function(){cycle(true)})});else if(saved==='gap')arm(ms,'gap',function(){cycle(true)});else schedule(0)}card.addEventListener('mouseenter',function(){if(cfg.triggerMode==='hover-start-no-loop'&amp;&amp;!hoverStarted){hoverStarted=true;stopped=false;once(cfg.startDelay)}else if(cfg.triggerMode==='hover-start-loop'&amp;&amp;!hoverStarted){hoverStarted=true;stopped=false;schedule(cfg.startDelay)}else if(cfg.triggerMode==='auto-loop-hover-stop-reset'&amp;&amp;!stopped){stop();stopped=true;initial()}else if(cfg.triggerMode==='auto-loop-hover-stop-remain')pauseRemain()});card.addEventListener('mouseleave',function(){if(cfg.triggerMode==='hover-start-no-loop')hoverStarted=false;else if(cfg.triggerMode==='auto-loop-hover-stop-remain')resumeRemain()});card.addEventListener('click',function(){if(cfg.triggerMode!=='none')return;stop();stopped=true;active(!card.classList.contains('is-active'))});initial();if(cfg.loopPreview){if(cfg.triggerMode==='auto-no-loop')once(cfg.startDelay);else if(['auto-loop','auto-loop-hover-stop-reset','auto-loop-hover-stop-remain'].indexOf(cfg.triggerMode)!==-1)schedule(cfg.startDelay)}})({&quot;triggerMode&quot;:&quot;auto-loop&quot;,&quot;loopPreview&quot;:true,&quot;startDelay&quot;:0,&quot;stayDuration&quot;:1.2,&quot;loopGap&quot;:0.8,&quot;flipDuration&quot;:0.8,&quot;returnDuration&quot;:0.8,&quot;initialSide&quot;:&quot;front&quot;});})()</script></body></html>"
+    ></iframe>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DW = 500;
+  var DH = 550;
+  var root = document.getElementById('vincta-design-root');
+  var viewport = document.getElementById('vincta-design-viewport');
+  var shell = document.getElementById('vincta-design-shell');
+  if (!root || !viewport || !shell || !(DW > 0) || !(DH > 0)) return;
+
+  function fit() {
+    var rw = root.clientWidth || 0;
+    var rh = root.clientHeight || 0;
+    var s = 1;
+    if (rw > 0 && rh > 0) {
+      s = Math.min(rw / DW, rh / DH);
+    } else if (rw > 0) {
+      s = rw / DW;
+    } else if (rh > 0) {
+      s = rh / DH;
+    }
+    if (!isFinite(s) || s <= 0) s = 1;
+    viewport.style.width = (DW * s) + 'px';
+    viewport.style.height = (DH * s) + 'px';
+    shell.style.transform = 'scale(' + s + ')';
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    try {
+      new ResizeObserver(fit).observe(root);
+    } catch (e) {}
+  }
+  window.addEventListener('resize', fit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+})();
+</script>
+</body>
+</html>

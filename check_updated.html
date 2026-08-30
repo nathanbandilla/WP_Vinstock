@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="vincta-download-purpose" content="design">
+<meta name="vincta-design-wrap" content="iframe">
+<meta name="vincta-design-width" content="300">
+<meta name="vincta-design-height" content="250">
+<meta name="vincta-content-width" content="300">
+<meta name="vincta-content-height" content="250">
+<title>Neon Pulse Checkbox</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:transparent;overflow:hidden;}
+.vincta-design-root{
+  width:100%;height:100%;min-height:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;box-sizing:border-box;
+}
+.vincta-design-viewport{
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  
+}
+.vincta-design-shell{
+  position:absolute;left:0;top:0;
+  width:300px;height:250px;
+  transform-origin:0 0;
+}
+
+.vincta-design-shell>iframe{
+  display:block;width:300px;height:250px;
+  max-width:300px;max-height:250px;
+  border:0;overflow:hidden;box-sizing:border-box;background:transparent;
+}
+
+</style>
+</head>
+<body>
+<div class="vincta-design-root" id="vincta-design-root">
+  <div class="vincta-design-viewport" id="vincta-design-viewport">
+    <div class="vincta-design-shell" id="vincta-design-shell">
+      <iframe
+      title="Neon Pulse Checkbox"
+      width="300"
+      height="250"
+      scrolling="no"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+      srcdoc="<!doctype html><html><head><meta charset=&quot;utf-8&quot;><meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;><link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;><link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin><link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap&quot;><style>:root{--surface-bg:transparent;--surface-radius:0px;--surface-padding:0px;--pad-x:0px;--pad-y:0px;--checkbox-size:25px;--label-gap:15px;--label-offset-y:0px;--label-justify:center;--checkbox-color:#9F6D28;--checkbox-color-2:#00FFCC;--checkbox-fill:#9F6D28;--checkbox-border:#39605E;--checkbox-bg:rgba(0,0,0,0.2);--checkbox-shadow:rgba(254,180,22,0.3);--border-width:2px;--box-radius:8px;--check-size:18px;--check-stroke-width:3;--check-color:#1A1A1A;--text-color:#C27100;--font-size:18px;--font-weight:400;--letter-spacing:0px;--item-font:'Poppins', sans-serif, sans-serif;--transition-s:0.4s;--anim-ease:cubic-bezier(.68,-.55,.265,1.55);--check-reveal-delay:0s;--check-rotation:360deg;--hover-scale:1.1;--glow-strength:15px;--pulse-s:1s;--pulse-scale:0.9;--dot-size:4px;--dot-distance:10px;--dots-display:block;--gradient-angle:45deg}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}#export-frame{width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}#surface-scale-wrap{position:relative;width:300px;height:250px;flex-shrink:0;transform-origin:center center}#design-surface{position:relative;width:300px;height:250px;overflow:visible;background:var(--surface-bg,transparent);border-radius:var(--surface-radius,0px)}.checkbox-position{position:absolute;left:calc(50% + var(--pad-x));top:calc(50% + var(--pad-y));transform:translate(-50%,-50%);width:calc(100% - (var(--surface-padding) * 2));height:calc(100% - (var(--surface-padding) * 2));display:flex;align-items:center;justify-content:var(--label-justify)}.checkbox-wrapper{display:flex;align-items:center;justify-content:flex-start;position:relative;cursor:pointer;width:max-content;max-width:100%;padding:10px;gap:var(--label-gap);font-family:var(--item-font);font-size:var(--font-size);font-weight:var(--font-weight);letter-spacing:var(--letter-spacing);line-height:1.15;color:var(--text-color);user-select:none;overflow:visible}.checkbox-wrapper,.checkbox-wrapper *,.checkbox-wrapper *::before,.checkbox-wrapper *::after{box-sizing:border-box}.checkbox-wrapper input{position:absolute;opacity:0;height:0;width:0}.checkbox-wrapper .checkmark{position:relative;width:var(--checkbox-size);height:var(--checkbox-size);flex:0 0 var(--checkbox-size);border:var(--border-width) solid var(--checkbox-border);border-radius:var(--box-radius);transition:all var(--transition-s) var(--anim-ease);display:flex;justify-content:center;align-items:center;background:var(--checkbox-bg);box-shadow:0 0 var(--glow-strength) var(--checkbox-shadow);overflow:hidden}.checkbox-wrapper .checkmark::before{content:&quot;&quot;;position:absolute;inset:0;background:var(--checkbox-fill);opacity:0;transition:all var(--transition-s) var(--anim-ease);transform:scale(0) rotate(-45deg)}.checkbox-wrapper input:checked~.checkmark::before{opacity:1;transform:scale(1) rotate(0)}.checkbox-wrapper .checkmark svg{width:0;height:0;color:var(--check-color);z-index:1;transition:all var(--transition-s) var(--anim-ease);transition-delay:0s;filter:drop-shadow(0 0 2px rgba(0,0,0,.5))}.checkbox-wrapper .checkmark svg path{stroke-width:var(--check-stroke-width)}.checkbox-wrapper input:checked~.checkmark svg{width:var(--check-size);height:var(--check-size);transform:rotate(var(--check-rotation));transition-delay:var(--check-reveal-delay)}.checkbox-wrapper:hover .checkmark{border-color:var(--checkbox-color);transform:scale(var(--hover-scale));box-shadow:0 0 calc(var(--glow-strength)*1.33) var(--checkbox-shadow),0 0 calc(var(--glow-strength)*2.66) var(--checkbox-shadow),inset 0 0 calc(var(--glow-strength)*.66) var(--checkbox-shadow)}.checkbox-wrapper.pulse-on input:checked~.checkmark{animation:neonPulse var(--pulse-s) var(--anim-ease)}@keyframes neonPulse{0%{transform:scale(1);box-shadow:0 0 calc(var(--glow-strength)*1.33) var(--checkbox-shadow)}50%{transform:scale(var(--pulse-scale));box-shadow:0 0 calc(var(--glow-strength)*2) var(--checkbox-shadow),0 0 calc(var(--glow-strength)*3.33) var(--checkbox-shadow)}100%{transform:scale(1);box-shadow:0 0 calc(var(--glow-strength)*1.33) var(--checkbox-shadow)}}.checkbox-wrapper .checkbox-link{color:inherit;text-decoration:none;display:inline-block;min-width:0;opacity:.9;transition:all .3s ease;text-shadow:0 0 calc(var(--glow-strength)*.66) var(--checkbox-shadow)}.checkbox-wrapper .item-label-text{display:inline-block;transform:translateY(var(--label-offset-y));white-space:nowrap}.checkbox-wrapper:hover .checkbox-link{opacity:1;transform:translateX(5px)}.checkbox-wrapper::after,.checkbox-wrapper::before{content:&quot;&quot;;display:var(--dots-display);position:absolute;width:var(--dot-size);height:var(--dot-size);border-radius:50%;background:var(--checkbox-color);opacity:0;transition:all .5s}.checkbox-wrapper::before{left:calc(-1*var(--dot-distance));top:50%}.checkbox-wrapper::after{right:calc(-1*var(--dot-distance));top:50%}.checkbox-wrapper:hover::before{opacity:1;transform:translateX(calc(-1*var(--dot-distance)));box-shadow:0 0 10px var(--checkbox-color)}.checkbox-wrapper:hover::after{opacity:1;transform:translateX(var(--dot-distance));box-shadow:0 0 10px var(--checkbox-color)}.checkbox-wrapper .checkbox-link[aria-disabled=&quot;true&quot;]{pointer-events:none}</style><script type=&quot;application/json&quot; id=&quot;vincta-html-embed-meta&quot;>{&quot;sourceHtmlId&quot;:&quot;&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;editSourceUrl&quot;:&quot;&quot;,&quot;htmlType&quot;:0,&quot;htmlSource&quot;:null,&quot;htmlTemplateId&quot;:null,&quot;width&quot;:300,&quot;htmlDesignWidth&quot;:300,&quot;height&quot;:250,&quot;htmlDesignHeight&quot;:250}</script>
+</head><body><div id=&quot;export-frame&quot;><div id=&quot;surface-scale-wrap&quot;><div id=&quot;design-surface&quot;><div class=&quot;checkbox-position&quot;><label class=&quot;checkbox-wrapper pulse-on&quot; id=&quot;neon-checkbox-wrapper&quot;><input type=&quot;checkbox&quot; class=&quot;check&quot; id=&quot;check1-61&quot;><div class=&quot;checkmark&quot; aria-hidden=&quot;true&quot;><svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot;><path d=&quot;M20 6L9 17L4 12&quot; stroke-width=&quot;3&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;></path></svg></div><a class=&quot;checkbox-link&quot; id=&quot;item-link-1&quot; href=&quot;https://vinstock.ai/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;><span class=&quot;item-label-text&quot;>Stay updated with us!</span></a></label></div></div></div></div><script id=&quot;vincta-template-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;animated-checklist&quot;,&quot;canvasWidth&quot;:300,&quot;canvasHeight&quot;:250,&quot;surfaceColor&quot;:&quot;#070A0D&quot;,&quot;surfaceTransparent&quot;:true,&quot;surfaceRadius&quot;:0,&quot;surfacePadding&quot;:0,&quot;checkboxSize&quot;:25,&quot;labelGap&quot;:15,&quot;labelOffsetY&quot;:0,&quot;labelAlign&quot;:&quot;center&quot;,&quot;padX&quot;:0,&quot;padY&quot;:0,&quot;borderWidth&quot;:2,&quot;boxRadius&quot;:8,&quot;checkSize&quot;:18,&quot;checkStrokeWidth&quot;:3,&quot;boxBgOpacity&quot;:20,&quot;glowStrength&quot;:15,&quot;hoverScale&quot;:1.1,&quot;glowDots&quot;:true,&quot;dotSize&quot;:4,&quot;dotDistance&quot;:10,&quot;fillMode&quot;:&quot;solid&quot;,&quot;neonColor&quot;:&quot;#9F6D28&quot;,&quot;neonColor2&quot;:&quot;#00FFCC&quot;,&quot;gradientAngle&quot;:45,&quot;borderColor&quot;:&quot;#39605E&quot;,&quot;glowColor&quot;:&quot;#FEB416&quot;,&quot;checkColor&quot;:&quot;#1A1A1A&quot;,&quot;textColor&quot;:&quot;#C27100&quot;,&quot;fontSize&quot;:18,&quot;fontFamily&quot;:&quot;Poppins&quot;,&quot;fontWeight&quot;:400,&quot;letterSpacing&quot;:0,&quot;label&quot;:&quot;Stay updated with us!&quot;,&quot;link&quot;:&quot;https://vinstock.ai/&quot;,&quot;transitionDuration&quot;:0.4,&quot;easing&quot;:&quot;cubic-bezier(.68,-.55,.265,1.55)&quot;,&quot;checkRotation&quot;:360,&quot;pulseEnabled&quot;:true,&quot;pulseDuration&quot;:1,&quot;pulseScale&quot;:0.9,&quot;triggerMode&quot;:&quot;none&quot;,&quot;initialState&quot;:&quot;unchecked&quot;,&quot;startDelay&quot;:0,&quot;checkRevealDelay&quot;:0,&quot;loopPreview&quot;:true,&quot;stayDuration&quot;:1,&quot;loopGap&quot;:0.8,&quot;toolType&quot;:&quot;ui&quot;,&quot;designWidth&quot;:300,&quot;designHeight&quot;:250,&quot;surfaceOrigin&quot;:&quot;center center&quot;,&quot;editorUiState&quot;:{&quot;sections&quot;:{&quot;sec-style&quot;:true,&quot;sec-animation&quot;:false},&quot;lastEditedControl&quot;:&quot;p_glowColor&quot;}}</script><script>(function(){const s=document.getElementById('surface-scale-wrap'),p=s.parentElement;function fit(){const w=p.clientWidth,h=p.clientHeight;s.style.transform='none';const z=Math.min(w/300,h/250);s.style.transform='scale('+z+')'}addEventListener('resize',fit);fit();(()=>{const box=document.getElementById('check1-61'),wrap=document.getElementById('neon-checkbox-wrapper'),link=document.getElementById('item-link-1'),mode=&quot;none&quot;,initialState=&quot;unchecked&quot;,startDelay=0,transition=0.4,checkDelay=0,stay=1,gap=0.8;let timer=null,hoverStopped=false,hoverStarted=false,hoverPaused=false;const loopModes=['auto-loop','auto-loop-hover-stop','auto-loop-hover-remain','hover-start-loop'];const isInitialChecked=()=>initialState==='checked';function stop(){clearTimeout(timer);timer=null}function cycle(delayMs=Math.max(0,startDelay)*1000){if(!box||!loopModes.includes(mode)||hoverStopped||hoverPaused||(mode==='hover-start-loop'&amp;&amp;!hoverStarted))return;timer=setTimeout(()=>{if(hoverStopped||hoverPaused)return;box.checked=true;timer=setTimeout(()=>{if(hoverStopped||hoverPaused)return;box.checked=false;timer=setTimeout(()=>cycle(Math.max(0,startDelay)*1000),Math.max(.2,gap)*1000)},Math.max(.1,transition+checkDelay+stay)*1000)},Math.max(0,delayMs))}function enter(){if(!box)return;if(mode==='auto-loop-hover-stop'){stop();hoverStopped=true;box.checked=true}else if(mode==='auto-loop-hover-remain'){stop();hoverPaused=true;box.checked=true}else if(mode==='hover-start-once'&amp;&amp;!hoverStarted){hoverStarted=true;box.checked=isInitialChecked();timer=setTimeout(()=>{box.checked=true;timer=null},Math.max(0,startDelay)*1000)}else if(mode==='hover-start-loop'&amp;&amp;!hoverStarted){hoverStarted=true;box.checked=isInitialChecked();cycle(Math.max(0,startDelay)*1000)}}function leave(){if(box&amp;&amp;mode==='auto-loop-hover-remain'&amp;&amp;hoverPaused){hoverPaused=false;box.checked=isInitialChecked();cycle(Math.max(0,startDelay)*1000)}}if(link)link.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const href=link.getAttribute('href');if(href)window.open(href,'_blank','noopener,noreferrer')});wrap?.addEventListener('mouseenter',enter);wrap?.addEventListener('mouseleave',leave);if(box){box.checked=isInitialChecked();if(mode==='auto-once')timer=setTimeout(()=>{box.checked=true;timer=null},Math.max(0,startDelay)*1000);else if(['auto-loop','auto-loop-hover-stop','auto-loop-hover-remain'].includes(mode))cycle(Math.max(0,startDelay)*1000)}})()})()</script></body></html>"
+    ></iframe>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DW = 300;
+  var DH = 250;
+  var root = document.getElementById('vincta-design-root');
+  var viewport = document.getElementById('vincta-design-viewport');
+  var shell = document.getElementById('vincta-design-shell');
+  if (!root || !viewport || !shell || !(DW > 0) || !(DH > 0)) return;
+
+  function fit() {
+    var rw = root.clientWidth || 0;
+    var rh = root.clientHeight || 0;
+    var s = 1;
+    if (rw > 0 && rh > 0) {
+      s = Math.min(rw / DW, rh / DH);
+    } else if (rw > 0) {
+      s = rw / DW;
+    } else if (rh > 0) {
+      s = rh / DH;
+    }
+    if (!isFinite(s) || s <= 0) s = 1;
+    viewport.style.width = (DW * s) + 'px';
+    viewport.style.height = (DH * s) + 'px';
+    shell.style.transform = 'scale(' + s + ')';
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    try {
+      new ResizeObserver(fit).observe(root);
+    } catch (e) {}
+  }
+  window.addEventListener('resize', fit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+})();
+</script>
+</body>
+</html>

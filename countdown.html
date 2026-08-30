@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="vincta-download-purpose" content="design">
+<meta name="vincta-design-wrap" content="iframe">
+<meta name="vincta-design-width" content="1440">
+<meta name="vincta-design-height" content="287">
+<meta name="vincta-content-width" content="1440">
+<meta name="vincta-content-height" content="287">
+<title>countdown-M17</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;background:transparent;overflow:hidden;}
+.vincta-design-root{
+  width:100%;height:100%;min-height:0;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;box-sizing:border-box;
+}
+.vincta-design-viewport{
+  position:relative;
+  overflow:hidden;
+  flex-shrink:0;
+  
+}
+.vincta-design-shell{
+  position:absolute;left:0;top:0;
+  width:1440px;height:287px;
+  transform-origin:0 0;
+}
+
+.vincta-design-shell>iframe{
+  display:block;width:1440px;height:287px;
+  max-width:1440px;max-height:287px;
+  border:0;overflow:hidden;box-sizing:border-box;background:transparent;
+}
+
+</style>
+</head>
+<body>
+<div class="vincta-design-root" id="vincta-design-root">
+  <div class="vincta-design-viewport" id="vincta-design-viewport">
+    <div class="vincta-design-shell" id="vincta-design-shell">
+      <iframe
+      title="countdown"
+      width="100%"
+      height="100%"
+      scrolling="no"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;id&quot;><head>
+<meta charset=&quot;UTF-8&quot;><meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;>
+<title>Countdown</title>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>
+<link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+<link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700;800&amp;display=swap&quot;>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{width:100%;height:100%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:transparent;}
+#export-frame{
+  position:relative;
+  width:1440px;height:287px;
+  flex-shrink:0;
+  overflow:hidden;
+  transform-origin:center center;
+}
+#content{position:relative;width:100%;height:100%;margin:0;overflow:hidden;}
+#design-surface{
+  position:relative;width:100%;height:100%;overflow:hidden;
+  --c-color-background:transparent; --c-label-color:#1c2722; --c-signup-color:#231919; --c-color-text:#1c2722; --c-color-dot:#271c1c; --c-color-button-text:#f4d9b5; --c-color-primary:#004d40; --c-color-accent:#477f75; --c-primary-bot:#003c32; --c-secondary-bot:#76461e; --c-color-secondary:#9c7a5d; --c-color-muted:#9c7a5d; --c-title-font:'Comfortaa', sans-serif, sans-serif; --c-title-size:23; --c-title-line-height:1.2; --c-title-letter-spacing:0em; --c-body-font:'Comfortaa', sans-serif, sans-serif; --c-body-size:23; --c-body-line-height:1.3; --c-body-letter-spacing:0em; --c-num-font:'Comfortaa', sans-serif, sans-serif; --c-num-size:41; --c-num-letter-spacing:-0.05em; --c-num-pos-x:0; --c-num-pos-y:0; --c-primary-action-font:'Comfortaa', sans-serif, sans-serif; --c-primary-action-size:21; --c-primary-action-letter-spacing:-0.02em; --c-label-pos-x:0; --c-label-pos-y:0; --c-signup-pos-x:0; --c-signup-pos-y:0; --c-btn-pos-x:0; --c-btn-pos-y:0; --c-title-weight:700; --c-body-weight:400; --c-primary-action-weight:700; --c-color-border:rgba(0,0,0,0.1); --c-color-surface:#ffffff;
+  background:transparent;
+}
+.ci{width:100%;height:100%;display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;padding:30px;box-sizing:border-box;}
+.tb{display:flex;flex-direction:column;align-items:flex-start;}
+.ct{display:flex;align-items:center;gap:10px;transform:translate(calc(var(--c-num-pos-x,0)*1px), calc(var(--c-num-pos-y,0)*1px));}
+.cb{text-align:center;width:89px;height:103px;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+#box-days{background:linear-gradient(to top,var(--c-secondary-bot) 0%,var(--c-secondary-bot) 50%,var(--c-color-secondary) 50%,var(--c-color-secondary) 100%);}
+#box-hours,#box-minutes,#box-seconds{background:linear-gradient(to top,var(--c-primary-bot) 0%,var(--c-primary-bot) 50%,var(--c-color-primary) 50%,var(--c-color-primary) 100%);}
+[data-theme-role=&quot;num&quot;]{font-family:var(--c-num-font);font-size:calc(var(--c-num-size)*1px);font-weight:bold;letter-spacing:var(--c-num-letter-spacing);color:var(--c-color-button-text);margin:0;line-height:1;}
+[data-theme-role=&quot;unit-label&quot;]{font-family:var(--c-num-font);font-size:12px;color:var(--c-color-button-text);opacity:0.85;margin-top:4px;}
+[data-theme-role=&quot;dot&quot;]{font-family:var(--c-num-font);font-size:calc(var(--c-num-size)*1px);color:var(--c-color-dot,var(--c-label-color));margin:0 0 16px;line-height:1;align-self:center;}
+[data-theme-role=&quot;title&quot;]{font-family:var(--c-title-font);font-size:calc(var(--c-title-size)*1px);font-weight:var(--c-title-weight);line-height:var(--c-title-line-height);letter-spacing:var(--c-title-letter-spacing);color:var(--c-label-color,var(--c-color-text));}
+[data-theme-role=&quot;body&quot;]{font-family:var(--c-body-font);font-size:calc(var(--c-body-size)*1px);font-weight:var(--c-body-weight);line-height:var(--c-body-line-height);letter-spacing:var(--c-body-letter-spacing);color:var(--c-signup-color,var(--c-color-text));}
+.lw{margin-bottom:16px;transform:translate(calc(var(--c-label-pos-x,0)*1px), calc(var(--c-label-pos-y,0)*1px));}
+.sg{display:flex;flex-direction:column;align-items:flex-start;}
+.si{max-width:350px;margin-bottom:18px;transform:translate(calc(var(--c-signup-pos-x,0)*1px), calc(var(--c-signup-pos-y,0)*1px));}
+.cbtn{display:inline-block;min-width:280px;padding:10px 28px;text-decoration:none;text-align:center;cursor:pointer;border:none;font-family:var(--c-primary-action-font);font-size:calc(var(--c-primary-action-size)*1px);font-weight:var(--c-primary-action-weight);letter-spacing:var(--c-primary-action-letter-spacing);color:#f4d9b5;background:#004d40;transform:translate(calc(var(--c-btn-pos-x,0)*1px), calc(var(--c-btn-pos-y,0)*1px));}
+</style><script type=&quot;application/json&quot; id=&quot;vincta-html-embed-meta&quot;>{&quot;sourceHtmlId&quot;:&quot;&quot;,&quot;sourceId&quot;:&quot;&quot;,&quot;editSourceUrl&quot;:&quot;&quot;,&quot;htmlType&quot;:0,&quot;htmlSource&quot;:null,&quot;htmlTemplateId&quot;:null,&quot;width&quot;:1502,&quot;htmlDesignWidth&quot;:1502,&quot;height&quot;:502,&quot;htmlDesignHeight&quot;:502}</script>
+</head>
+<body>
+<div id=&quot;export-frame&quot;>
+  <div id=&quot;content&quot;>
+    <div id=&quot;design-surface&quot;>
+      <div class=&quot;ci&quot;>
+        <div class=&quot;tb&quot;>
+          <div class=&quot;lw&quot;><span data-theme-role=&quot;title&quot;>The journey begins here.</span></div>
+          <div class=&quot;ct&quot;>
+            <div class=&quot;cb&quot; id=&quot;box-days&quot;><p id=&quot;el-days&quot; data-theme-role=&quot;num&quot;>00</p><p data-theme-role=&quot;unit-label&quot;>days</p></div>
+            <p data-theme-role=&quot;dot&quot;>:</p>
+            <div class=&quot;cb&quot; id=&quot;box-hours&quot;><p id=&quot;el-hours&quot; data-theme-role=&quot;num&quot;>00</p><p data-theme-role=&quot;unit-label&quot;>hours</p></div>
+            <p data-theme-role=&quot;dot&quot;>:</p>
+            <div class=&quot;cb&quot; id=&quot;box-minutes&quot;><p id=&quot;el-minutes&quot; data-theme-role=&quot;num&quot;>00</p><p data-theme-role=&quot;unit-label&quot;>minutes</p></div>
+            <p data-theme-role=&quot;dot&quot;>:</p>
+            <div class=&quot;cb&quot; id=&quot;box-seconds&quot;><p id=&quot;el-seconds&quot; data-theme-role=&quot;num&quot;>00</p><p data-theme-role=&quot;unit-label&quot;>seconds</p></div>
+          </div>
+        </div>
+        <div class=&quot;sg&quot;>
+          <div class=&quot;si&quot;><span data-theme-role=&quot;body&quot;>Stay inspired and never miss a moment.</span></div>
+          <a href=&quot;https://vinstock.ai&quot; class=&quot;cbtn&quot;>Keep Me Updated</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script id=&quot;vincta-template-params&quot; type=&quot;application/json&quot;>{&quot;schemaVersion&quot;:1,&quot;componentType&quot;:&quot;countdown-tool&quot;,&quot;bgTransparent&quot;:true,&quot;bgColor&quot;:&quot;#eeeeee&quot;,&quot;labelColor&quot;:&quot;#1c2722&quot;,&quot;signupColor&quot;:&quot;#231919&quot;,&quot;buttonText&quot;:&quot;#f4d9b5&quot;,&quot;primary&quot;:&quot;#004d40&quot;,&quot;secondary&quot;:&quot;#76461e&quot;,&quot;dotColor&quot;:&quot;#271c1c&quot;,&quot;labelText&quot;:&quot;The journey begins here.&quot;,&quot;signupText&quot;:&quot;Stay inspired and never miss a moment.&quot;,&quot;btnText&quot;:&quot;Keep Me Updated&quot;,&quot;btnUrl&quot;:&quot;https://vinstock.ai&quot;,&quot;targetDate&quot;:&quot;2026-09-12T00:32&quot;,&quot;fontLabel&quot;:&quot;Comfortaa&quot;,&quot;fontNum&quot;:&quot;Comfortaa&quot;,&quot;fontSignup&quot;:&quot;Comfortaa&quot;,&quot;fontBtn&quot;:&quot;Comfortaa&quot;,&quot;titleSize&quot;:&quot;23&quot;,&quot;titleLineH&quot;:&quot;1.2&quot;,&quot;titleLetterS&quot;:&quot;0&quot;,&quot;bodySize&quot;:&quot;23&quot;,&quot;bodyLineH&quot;:&quot;1.3&quot;,&quot;bodyLetterS&quot;:&quot;0&quot;,&quot;numSize&quot;:&quot;41&quot;,&quot;numLetterS&quot;:&quot;-0.05&quot;,&quot;numPosX&quot;:&quot;0&quot;,&quot;numPosY&quot;:&quot;0&quot;,&quot;btnSize&quot;:&quot;21&quot;,&quot;btnLetterS&quot;:&quot;-0.02&quot;,&quot;labelPosX&quot;:&quot;0&quot;,&quot;labelPosY&quot;:&quot;0&quot;,&quot;signupPosX&quot;:&quot;0&quot;,&quot;signupPosY&quot;:&quot;0&quot;,&quot;btnPosX&quot;:&quot;0&quot;,&quot;btnPosY&quot;:&quot;0&quot;,&quot;canvasWidth&quot;:1440,&quot;canvasHeight&quot;:287,&quot;cssVars&quot;:{&quot;--c-color-background&quot;:&quot;transparent&quot;,&quot;--c-label-color&quot;:&quot;#1c2722&quot;,&quot;--c-signup-color&quot;:&quot;#231919&quot;,&quot;--c-color-text&quot;:&quot;#1c2722&quot;,&quot;--c-color-dot&quot;:&quot;#271c1c&quot;,&quot;--c-color-button-text&quot;:&quot;#f4d9b5&quot;,&quot;--c-color-primary&quot;:&quot;#004d40&quot;,&quot;--c-color-accent&quot;:&quot;#477f75&quot;,&quot;--c-primary-bot&quot;:&quot;#003c32&quot;,&quot;--c-secondary-bot&quot;:&quot;#76461e&quot;,&quot;--c-color-secondary&quot;:&quot;#9c7a5d&quot;,&quot;--c-color-muted&quot;:&quot;#9c7a5d&quot;,&quot;--c-title-font&quot;:&quot;'Comfortaa', sans-serif, sans-serif&quot;,&quot;--c-title-size&quot;:&quot;23&quot;,&quot;--c-title-line-height&quot;:&quot;1.2&quot;,&quot;--c-title-letter-spacing&quot;:&quot;0em&quot;,&quot;--c-body-font&quot;:&quot;'Comfortaa', sans-serif, sans-serif&quot;,&quot;--c-body-size&quot;:&quot;23&quot;,&quot;--c-body-line-height&quot;:&quot;1.3&quot;,&quot;--c-body-letter-spacing&quot;:&quot;0em&quot;,&quot;--c-num-font&quot;:&quot;'Comfortaa', sans-serif, sans-serif&quot;,&quot;--c-num-size&quot;:&quot;41&quot;,&quot;--c-num-letter-spacing&quot;:&quot;-0.05em&quot;,&quot;--c-num-pos-x&quot;:&quot;0&quot;,&quot;--c-num-pos-y&quot;:&quot;0&quot;,&quot;--c-primary-action-font&quot;:&quot;'Comfortaa', sans-serif, sans-serif&quot;,&quot;--c-primary-action-size&quot;:&quot;21&quot;,&quot;--c-primary-action-letter-spacing&quot;:&quot;-0.02em&quot;,&quot;--c-label-pos-x&quot;:&quot;0&quot;,&quot;--c-label-pos-y&quot;:&quot;0&quot;,&quot;--c-signup-pos-x&quot;:&quot;0&quot;,&quot;--c-signup-pos-y&quot;:&quot;0&quot;,&quot;--c-btn-pos-x&quot;:&quot;0&quot;,&quot;--c-btn-pos-y&quot;:&quot;0&quot;,&quot;--c-title-weight&quot;:&quot;700&quot;,&quot;--c-body-weight&quot;:&quot;400&quot;,&quot;--c-primary-action-weight&quot;:&quot;700&quot;,&quot;--c-color-border&quot;:&quot;rgba(0,0,0,0.1)&quot;,&quot;--c-color-surface&quot;:&quot;#ffffff&quot;}}</script>
+<script>(function(){
+  var DESIGN_W=1440, DESIGN_H=287;
+  function fit() {
+    var frame = document.getElementById('export-frame');
+    if (!frame) return;
+    var p = frame.parentElement;
+    var sc = Math.min(p.clientWidth / DESIGN_W, p.clientHeight / DESIGN_H);
+    frame.style.transform = 'scale(' + sc + ')';
+  }
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', fit);
+  var cd = new Date(&quot;2026-09-12T00:32&quot;).getTime();
+  setInterval(function() {
+    var dist = cd - Date.now();
+    var d = Math.max(0, Math.floor(dist / 864e5));
+    var h = Math.max(0, Math.floor(dist % 864e5 / 36e5));
+    var m = Math.max(0, Math.floor(dist % 36e5 / 6e4));
+    var sec = Math.max(0, Math.floor(dist % 6e4 / 1e3));
+    function p2(n) { return String(n).padStart(2, '0'); }
+    document.getElementById('el-days').textContent = p2(d);
+    document.getElementById('el-hours').textContent = p2(h);
+    document.getElementById('el-minutes').textContent = p2(m);
+    document.getElementById('el-seconds').textContent = p2(sec);
+  }, 1000);
+})();</script>
+</body></html>"
+    ></iframe>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DW = 1440;
+  var DH = 287;
+  var root = document.getElementById('vincta-design-root');
+  var viewport = document.getElementById('vincta-design-viewport');
+  var shell = document.getElementById('vincta-design-shell');
+  if (!root || !viewport || !shell || !(DW > 0) || !(DH > 0)) return;
+
+  function fit() {
+    var rw = root.clientWidth || 0;
+    var rh = root.clientHeight || 0;
+    var s = 1;
+    if (rw > 0 && rh > 0) {
+      s = Math.min(rw / DW, rh / DH);
+    } else if (rw > 0) {
+      s = rw / DW;
+    } else if (rh > 0) {
+      s = rh / DH;
+    }
+    if (!isFinite(s) || s <= 0) s = 1;
+    viewport.style.width = (DW * s) + 'px';
+    viewport.style.height = (DH * s) + 'px';
+    shell.style.transform = 'scale(' + s + ')';
+  }
+
+  if (typeof ResizeObserver !== 'undefined') {
+    try {
+      new ResizeObserver(fit).observe(root);
+    } catch (e) {}
+  }
+  window.addEventListener('resize', fit);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit);
+  } else {
+    fit();
+  }
+})();
+</script>
+</body>
+</html>
